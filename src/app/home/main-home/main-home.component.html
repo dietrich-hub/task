@@ -1,0 +1,70 @@
+<div class="home-content">
+  <div class="left-content">
+    <app-search-bar></app-search-bar>
+
+    <div class="task-content">
+      <div>
+        <div style="position: relative;display: flex;gap: 5px;justify-content: center;align-items: center">
+          <p class="title-main-home">To do</p>
+          <div class="button-add">
+            <button class="button button-theme-action "  (click)="onActiveTodoFormt()">Add new To do</button>
+            <div class="input-content-todo">
+              <div [ngClass]="{'content-global-todo-add':true,'content-global-todo-add-active':acitveTodoForm}">
+                <div class="content-form-todo">
+                  cc
+                  <br>
+                  d
+                  <br>
+                  k
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="list-todo">
+            <app-todo-item></app-todo-item>
+            <app-todo-item></app-todo-item>
+            <app-todo-item></app-todo-item>
+        </div>
+      </div>
+      <div>
+        <div style="display: flex;gap: 5px;justify-content: center;align-items: center">
+          <p class="title-main-home">Remember Me</p>
+
+          <div class="button-add">
+            <button class="button button-theme-secondaire " (click)="onActiveRememberForm()">Add new Remember</button>
+
+            <div class="input-content-remember">
+              <div [ngClass]="{'content-global-todo-add':true,'content-global-todo-add-active':activeRememberForm}">
+                <div class="content-form-remember">
+                  cc
+                  <br>
+                  d
+                  <br>
+                  k
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="right-content">
+    <div>
+      <div class="calendar-content">
+        <div>13</div>
+        <div>lundi,2022</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

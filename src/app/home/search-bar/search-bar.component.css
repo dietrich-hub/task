@@ -1,0 +1,25 @@
+.search-button{
+  border: none;
+  background: transparent;
+}
+.search-content{
+  display: flex;
+  align-items: center;
+  border: 2px solid #000 ;
+  border-radius: 10px;
+  width: 30%;
+  padding: 5px;
+}
+.search-content>:nth-child(1){
+  font-size: 20px;
+}
+.search-content>:nth-child(2){
+  width: 100%;
+  padding: 10px 0;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+}
+.search-content>:nth-child(2):focus{
+  outline: none;
+}
