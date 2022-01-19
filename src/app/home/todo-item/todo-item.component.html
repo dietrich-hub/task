@@ -1,3 +1,13 @@
-<div class="item-content">
-  test
+<div [ngClass]="{'item-content':true,'voir':voir}">
+  <div >
+    <form *ngIf="isEdit" >
+      <textarea class="textarea" #textarea   rows="1" cols="50"  [(ngModel)]="taskDes" [ngModelOptions]="{standalone: true}">{{taskDes}}</textarea>
+    </form>
+    <div *ngIf="!isEdit">{{taskDes}}</div>
+  </div>
+  <div>
+    <button *ngIf="!isEdit" class="button button-arround-reduced button-arround button-theme-secondaire-outline" (click)="onDoingEditable()">Edit</button>
+    <button *ngIf="isEdit" class="button button-arround-reduced button-arround button-theme-secondaire-outline" (click)="onsave()">save</button>
+    <button class="button button-arround-reduced button-arround button-theme-action-outline" (click)="removeThis()">Remove</button>
+  </div>
 </div>

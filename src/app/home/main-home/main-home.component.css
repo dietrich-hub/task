@@ -73,6 +73,7 @@ linear-gradient(336deg, rgba(218,135,170,.8), rgba(0,0,255,0) 70.71%);
 .list-todo{
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 15px;
   width: 60%;
   height: 70%;
@@ -124,6 +125,7 @@ linear-gradient(336deg, rgba(218,135,170,.8), rgba(0,0,255,0) 70.71%);
   backdrop-filter: blur( 32px );
   -webkit-backdrop-filter: blur( 32px );
   border-radius: 10px;
+  padding: 10px 30px;
 }
 .content-form-todo::after{
   content: "";
@@ -134,6 +136,7 @@ linear-gradient(336deg, rgba(218,135,170,.8), rgba(0,0,255,0) 70.71%);
   border-style: solid;
   border-color: transparent transparent rgba(73, 150, 209, 1) transparent;
 }
+
 
 .input-content-remember{
   position: absolute;
@@ -162,4 +165,13 @@ linear-gradient(336deg, rgba(218,135,170,.8), rgba(0,0,255,0) 70.71%);
   border-width: 20px;
   border-style: solid;
   border-color: transparent transparent rgba(210, 34, 96, 1) transparent;
+}
+.form-todo>textarea{
+  font-family: Arial, serif;
+  font-size: 15px;
+}
+.form-todo>textarea:focus{
+  border-radius: 2px;
+  outline: 2px solid rgba(210, 34, 96, 1);
+  border: none;
 }

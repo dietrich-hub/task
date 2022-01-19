@@ -7,6 +7,8 @@ import { HomeModule } from './home/home.module';
 import { RouterModule, Routes} from "@angular/router";
 import {MainHomeComponent} from "./home/main-home/main-home.component";
 import {MainWelcomeComponent} from "./bienvenue/main-welcome/main-welcome.component";
+import {TaskService} from "./services/task.service";
+
 
 const routeMod : Routes=[
   {path :"home", component : MainHomeComponent},
@@ -24,7 +26,7 @@ const routeMod : Routes=[
     HomeModule,
     RouterModule.forRoot(routeMod)
   ],
-  providers: [],
+  providers: [TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

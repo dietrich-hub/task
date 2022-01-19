@@ -4,6 +4,8 @@ import { MainHomeComponent } from './main-home/main-home.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { AddnewTodoComponent } from './addnew-todo/addnew-todo.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { RememberItemComponent } from './remember-item/remember-item.component';
 
 
 
@@ -12,10 +14,13 @@ import { AddnewTodoComponent } from './addnew-todo/addnew-todo.component';
     MainHomeComponent,
     SearchBarComponent,
     TodoItemComponent,
-    AddnewTodoComponent
+    AddnewTodoComponent,
+    RememberItemComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeModule { }

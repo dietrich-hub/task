@@ -7,4 +7,48 @@
   backdrop-filter: blur( 32px );
   -webkit-backdrop-filter: blur( 32px );
   border-radius: 5px;
+  font-size: 20px;
+  display: flex;
+}
+.voir{
+  animation: dispertion .2s 0.0s ease-out forwards;
+}
+.voir>:nth-child(1){
+  opacity: 0;
+}
+.voir>:nth-child(2){
+ opacity: 0;
+}
+@keyframes dispertion {
+ 0%{
+   padding: 13px 40px;
+ }
+  30%{
+    padding: 6px 40px;
+  }
+  100%{
+    padding: 3px 10px;
+  }
+}
+.item-content>:nth-child(1){
+  width: 70%;
+  overflow: hidden;
+}
+.textarea{
+  background: transparent;
+  font-size: 20px;
+  font-family: Arial, serif;
+  padding: 5px 7px;
+  border: none;
+  border-bottom: 3px solid black;
+}
+.textarea:focus{
+  outline: none;
+  border-bottom: 3px solid #4996d1;
+}
+.item-content>:nth-child(2){
+  width: 30%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

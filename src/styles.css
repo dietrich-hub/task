@@ -58,7 +58,7 @@ body{
   border-radius: 980px;
 }
 .button-arround-reduced{
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.33337;
   font-weight: 400;
   letter-spacing: -.01em;
@@ -90,5 +90,26 @@ body{
 }
 .button-theme-secondaire:hover{
   background-color: #0088c9;
+  background: linear-gradient(#038ccc,#4ba4e7);
+}
+
+.button-theme-action-outline{
+  background: transparent;
+  border: 2px solid #d23069;
+}
+.button-theme-action-outline:hover{
+  background-color: #bf124e;
+  color: #fff;
+  background: linear-gradient(#bd0747, #bf124e);
+}
+
+.button-theme-secondaire-outline{
+  background: transparent;
+  border: 2px solid #4996d1;
+
+}
+.button-theme-secondaire-outline:hover{
+  background-color: #0088c9;
+  color: #fff;
   background: linear-gradient(#038ccc,#4ba4e7);
 }

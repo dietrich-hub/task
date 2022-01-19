@@ -11,11 +11,13 @@
             <div class="input-content-todo">
               <div [ngClass]="{'content-global-todo-add':true,'content-global-todo-add-active':acitveTodoForm}">
                 <div class="content-form-todo">
-                  cc
-                  <br>
-                  d
-                  <br>
-                  k
+                  <form  class="form-todo" [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+
+                    <label class="description" for="description">Description : </label>
+                    <textarea id="description" rows="10" cols="40" #textareaT formControlName="description"></textarea>
+                    <button type="submit" class="button button-arround button-theme-action" [disabled]="todoForm.invalid">&nbsp; Add &nbsp;</button>
+
+                  </form>
                 </div>
               </div>
             </div>
@@ -25,9 +27,8 @@
 
 
         <div class="list-todo">
-            <app-todo-item></app-todo-item>
-            <app-todo-item></app-todo-item>
-            <app-todo-item></app-todo-item>
+            <app-todo-item *ngFor="let todo of todosList;let i=index"  [Index]="i" [editable]="todo.editable" [id]="todo.id" [taskDes]="todo.description"></app-todo-item>
+
         </div>
       </div>
       <div>
@@ -60,7 +61,7 @@
   <div class="right-content">
     <div>
       <div class="calendar-content">
-        <div>13</div>
+        <div>13 <span style="font-size: 17px">/Jan</span></div>
         <div>lundi,2022</div>
       </div>
 
