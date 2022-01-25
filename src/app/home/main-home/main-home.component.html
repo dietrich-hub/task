@@ -41,16 +41,21 @@
             <div class="input-content-remember">
               <div [ngClass]="{'content-global-todo-add':true,'content-global-todo-add-active':activeRememberForm}">
                 <div class="content-form-remember">
-                  cc
-                  <br>
-                  d
-                  <br>
-                  k
+                  <form  class="form-remember" [formGroup]="rememberForm" (ngSubmit)="onSubmitRemember()">
+
+                    <label class="descriptionR" for="description">Description : </label>
+                    <textarea id="descriptionR" rows="10" cols="40" formControlName="descriptionR"></textarea>
+                    <button type="submit" class="button button-arround button-theme-secondaire" [disabled]="rememberForm.invalid">&nbsp; Add Action &nbsp;</button>
+
+                  </form>
                 </div>
               </div>
             </div>
           </div>
 
+        </div>
+        <div class="list-remember">
+             <app-remember-item *ngFor="let remember of rememberList;let i=index" [Index]="i" [editable]="remember.editable" [id]="remember.id" [taskDes]="remember.description"></app-remember-item>
         </div>
 
       </div>
@@ -61,8 +66,8 @@
   <div class="right-content">
     <div>
       <div class="calendar-content">
-        <div>13 <span style="font-size: 17px">/Jan</span></div>
-        <div>lundi,2022</div>
+        <div>{{date | date :"d"}} <span style="font-size: 17px">/{{date| date:"MMM"}}</span></div>
+        <div>{{date | date:"EEEE"}},{{date | date:"YYYY"}}</div>
       </div>
 
     </div>

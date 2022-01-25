@@ -9,8 +9,10 @@
   border-radius: 5px;
   font-size: 20px;
   display: flex;
+  border: 3px solid black;
 }
 .voir{
+  border: none;
   animation: dispertion .2s 0.0s ease-out forwards;
 }
 .voir>:nth-child(1){

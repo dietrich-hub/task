@@ -1,4 +1,4 @@
-import {TodoModel} from "../model/task.model";
+import {Remember, TodoModel} from "../model/task.model";
 import {Injectable} from "@angular/core";
 import {Subject} from "rxjs";
 
@@ -16,14 +16,29 @@ export class TaskService {
     },
     {
       id : 2,
-      description : "Do My HomeWork",
+      description : "My HomeWork",
       editable : false,
       isDelete : false
     }
   ];
+
+  remembersSubject = new Subject<Remember[]>();
+  private remembers : any|Remember[]=[
+    {
+      id:1,
+      description:"Do My HomeWork"
+    },
+    {
+      id:2,
+      description: "Go See My Father"
+    }
+  ]
   constructor() {
   }
 
+  /**
+   * Todo method manage
+   */
   // @ts-ignore
   getTodo() : TodoModel[]{
     return this.todos;
@@ -46,6 +61,23 @@ export class TaskService {
       this.emitTodosSubject();
     }
 
+  }
+
+  /**
+   * Remember Method manage
+   */
+
+  onEmitRemembers(){
+    this.remembersSubject.next(this.remembers);
+  }
+  addNewRemember(remember : Remember){
+    this.remembers.push(remember);
+    this.onEmitRemembers();
+  }
+
+  removeSingleRemember(index: number | undefined){
+    this.remembers.splice(index,1);
+    this.onEmitRemembers();
   }
 
 }

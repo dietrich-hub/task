@@ -1,1 +1,29 @@
-<p>remember-item works!</p>
+
+
+<div style="display: flex;flex-direction: column;position: relative" [ngClass]="{'remove-r':isRemove}">
+  <div [ngClass]="{'item-content-r':true,'hide-child':isRemove}" (mouseover)="activeV()" (mouseleave)="desactiveV()">
+
+
+    <div >
+      <form *ngIf="isEdit" >
+        <textarea class="textarea-r" #textarea   rows="1" cols="50"  [(ngModel)]="taskDes" [ngModelOptions]="{standalone: true}">{{taskDes}}</textarea>
+      </form>
+      <div *ngIf="!isEdit">{{taskDes}}</div>
+    </div>
+
+    <div>
+      <button *ngIf="!isEdit" class="button button-arround-reduced button-arround button-theme-secondaire-outline" (click)="onDoingEditable()">Edit</button>
+      <button *ngIf="isEdit" class="button button-arround-reduced button-arround button-theme-secondaire-outline" (click)="onsave()">save</button>
+      <button class="button button-arround-reduced button-arround button-theme-action-outline"  (click)="removeThisRemember()">Remove</button>
+    </div>
+
+
+
+  </div>
+  <div [ngClass]="{'more-see':true,'active-more':activeVisibility}">
+    <div class="more-see-child">
+      detail
+    </div>
+  </div>
+</div>
+
