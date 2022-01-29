@@ -39,7 +39,12 @@
 }
 .item-content-r>:nth-child(1){
   width: 70%;
-  overflow: hidden;
+
+}
+.item-content-r>:nth-child(2){
+  width: 30%;
+  display: flex;
+  align-items: center;
 }
 .textarea-r{
   background: transparent;
@@ -53,41 +58,52 @@
   outline: none;
   border-bottom: 3px solid #4996d1;
 }
-.item-content-r>:nth-child(2){
-  width: 30%;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.pos{
+  top: 91%;
+  left: 10%;
+  margin-left: -15px;
+  position: absolute;
+  border-style: solid;
+  visibility: hidden;
+  border-color: rgba(218,135,170,1) transparent transparent transparent;
+  border-radius: 50%;
+  border-width: 20px;
+  z-index: 2;
 }
 .more-see{
-  width: 100%;
-  display: flex;
+  width: 60%;
   position: absolute;
   top: 103%;
   left: 1%;
   z-index: 2;
   visibility: hidden;
-}
-.more-see>:nth-child(1){
-  width: 60%;
   background: rgba(218,135,170,1);
   border-radius: 7px;
-  padding: 10px 30px;
+  padding: 5px 30px;
+  word-wrap: break-word;
   box-shadow: 0 40px 80px 30px rgba(0, 0, 0, 0.04),50px 40px 80px 7px rgba(0, 0, 0, 0.01),100px 30px 40px 0 rgba(0, 0, 0, 0.01), 0 3px 10px 0 rgba(0, 0, 0, 0.07);
 }
+/*.more-see>:nth-child(1){*/
+/*  width: 60%;*/
+/*  background: rgba(218,135,170,1);*/
+/*  position: relative;*/
+/*  border-radius: 7px;*/
+/*  padding: 10px 30px;*/
+/*  box-shadow: 0 40px 80px 30px rgba(0, 0, 0, 0.04),50px 40px 80px 7px rgba(0, 0, 0, 0.01),100px 30px 40px 0 rgba(0, 0, 0, 0.01), 0 3px 10px 0 rgba(0, 0, 0, 0.07);*/
+/*}*/
 .more-see-child{
   position: relative;
 }
-.more-see-child::after{
-  content: "";
-  border-width: 20px;
-  position: absolute;
-  top: -19%;
-  left: 10%;
-  border-style: solid;
-  border-color: rgba(218,135,170,1) transparent transparent transparent;
-  border-radius: 50%;
-}
+/*.more-see::before{*/
+/*  content: "";*/
+/*  border-width: 20px;*/
+/*  position: absolute;*/
+/*  top: 16%;*/
+/*  left: 10%;*/
+/*  border-style: solid;*/
+/*  border-color: rgba(218,135,170,1) transparent transparent transparent;*/
+/*  border-radius: 50%;*/
+/*}*/
 .active-more{
   visibility: visible;
 }

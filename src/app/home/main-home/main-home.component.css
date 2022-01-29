@@ -13,7 +13,7 @@
   width: 25%;
   height: 100%;
 }
-.right-content>:nth-child(1){
+.right-content-child-1{
   margin-top: 30px;
   margin-left: 10px;
   margin-right: 30px;
@@ -21,7 +21,15 @@
   height: 60%;
   padding: 10px;
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   box-shadow: 0 40px 80px 30px rgba(0, 0, 0, 0.04),50px 40px 80px 7px rgba(0, 0, 0, 0.01),100px 30px 40px 0 rgba(0, 0, 0, 0.01), 0 3px 10px 0 rgba(0, 0, 0, 0.07);
+}
+.activity-child{
+  display: flex;
+  gap: 7px;
+  width: 100%;
 }
 .calendar-content{
   height: 40%;
@@ -202,4 +210,75 @@ linear-gradient(336deg, rgba(218,135,170,.8), rgba(0,0,255,0) 70.71%);
   gap: 15px;
   width: 90%;
   height: 70%;
+}
+.time-content{
+  background: #3451c7;
+  width: 120px;
+  height: 150px;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.time-content-letter{
+  text-shadow: 0 0 30px rgb(0 0 0 / 50%);
+  font-size: 50px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: white;
+}
+.emotion-carousel{
+  width: 70%;
+  height: 150px;
+  border-radius: 13px;
+  position: relative;
+  background: #dfdfdf;
+  overflow: hidden;
+}
+.emotion-carousel>:nth-child(1){
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 100%;
+  border-radius: 13px;
+  background: #fabca6;
+  }
+.emotion-carousel>:nth-child(2){
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 100%;
+  border-radius: 13px;
+  background: #ada8d6;
+  }
+
+.emotion-carousel>:nth-child(3){
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 100%;
+  opacity: 1;
+  border-radius: 13px;
+  background: #fabca6;
+  }
+.active-carousel{
+  animation: left 1s .0s ease-in forwards;
+}
+.go-out{
+  z-index: -10;
+}
+@keyframes left {
+  100%{
+    left: 0;
+  }
+}
+@keyframes goO {
+  100%{
+    left: -100%;
+  }
 }

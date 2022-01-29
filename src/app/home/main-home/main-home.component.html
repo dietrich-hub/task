@@ -64,13 +64,37 @@
   </div>
 
   <div class="right-content">
-    <div>
+    <div class="right-content-child-1">
       <div class="calendar-content">
         <div>{{date | date :"d"}} <span style="font-size: 17px">/{{date| date:"MMM"}}</span></div>
         <div>{{date | date:"EEEE"}},{{date | date:"YYYY"}}</div>
       </div>
 
+      <div class="activity-child">
+        <div class="time-content">
+          <span class="time-content-letter">{{time | date:"HH"}}<span style="font-size: 17px">h</span></span>
+          <span class="time-content-letter">{{time | date:"mm"}}</span>
+        </div>
+
+        <div class="emotion-carousel">
+            <div [ngClass]="{'active-carousel':first}">
+              <img width="130" height="130" src="../../../assets/memojistylefemale04.svg" alt="">
+              <p class="title-main-home" style="font-size: 30px">Love is Love Lady</p>
+            </div>
+            <div [ngClass]="{'active-carousel':second}">
+              <img width="130" height="130" src="../../../assets/memojisquare10.svg" alt="">
+              <p class="title-main-home" style="font-size: 30px">Is So Wonderful !!</p>
+            </div>
+            <div [ngClass]="{'active-carousel':three}">
+              <img width="130" height="130" src="../../../assets/memojisquare12.svg" alt="">
+              <p class="title-main-home" style="font-size: 30px">Say Yo Amigo</p>
+            </div>
+        </div>
+      </div>
+
     </div>
+
+
   </div>
 
 </div>
