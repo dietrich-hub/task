@@ -1,8 +1,8 @@
 # Task 
 ----
-![screen1](src/assets/Screenshot 2022-01-29 013838.png)
+![screen1](https://github.com/dietrich-hub/task/blob/main/src/assets/Screenshot%202022-01-29%20013838.png)
 ----
-![screen2](src/assets/Screenshot 2022-01-29 014003.png)
+![screen2](https://github.com/dietrich-hub/task/blob/main/src/assets/Screenshot%202022-01-29%20014003.png)
 
 Applications of management of the unipersonal activities of an internet user. Create for the purpose of angular book, improved version and implemented for a simple design.
 
